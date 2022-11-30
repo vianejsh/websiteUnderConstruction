@@ -3091,7 +3091,7 @@ img.u-pull-left {
     align-items    : flex-end;
     height         : 100vh;
     min-height     : calc(25.5 * var(--space));
-    padding-top    : 20vh;
+    padding-top    : 5vh;
     padding-bottom : 8.8rem;
     position       : relative;
 }
@@ -3394,6 +3394,8 @@ img.u-pull-left {
  *
  * ------------------------------------------------------------------- */
 .s-info {
+    /* temp display none TODO */
+    display: none; 
     padding-top    : var(--vspace-5);
     padding-bottom : var(--vspace-4);
     width          : 100%;
