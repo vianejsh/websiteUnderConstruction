@@ -2904,7 +2904,7 @@ img.u-pull-left {
 }
 
 .s-intro a {
-    border : none;
+    border : 10px;
 }
 
 .theme-particles .s-intro {
@@ -2932,7 +2932,8 @@ img.u-pull-left {
     bottom              : 0;
     width               : 100%;
     height              : 100%;
-    background-image    : url(../images/bg-static.jpg);
+    background-image    : url(../images/2404544upscaled.jpg);
+    background-color    : var(--color-gray-12);
     background-repeat   : no-repeat;
     background-position : center;
     background-size     : cover;
@@ -3094,6 +3095,10 @@ img.u-pull-left {
     padding-top    : 5vh;
     padding-bottom : 8.8rem;
     position       : relative;
+    /* background-image    : url(../images/8kupscaled.jpg); */
+    /* background-repeat   : no-repeat; */
+    /* background-position : center; */
+    /* background-size     : cover; */
 }
 
 .s-intro__content-bottom {
