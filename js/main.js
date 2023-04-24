@@ -524,4 +524,10 @@
         }
     });
     }
+
+
+    var common_slide_buttons = document.getElementsByClassName("common_slide_buttons");
+    for( i = 0; i< common_slide_buttons.length; i++){
+        
+    }
 })(document.documentElement);

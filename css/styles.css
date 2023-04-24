@@ -1632,6 +1632,14 @@ hr.fancy::before {
     left              : 50%;
 }
 
+.logo-app {
+    width: 100px;
+    height: 100px;
+    background-repeat : no-repeat;
+    background        : center center;
+    background-size   : contain;
+}
+
 .drop-cap:first-letter {
     float          : left;
     font-family    : var(--font-1);
@@ -2775,8 +2783,8 @@ img.u-pull-left {
     z-index   : 101;
     transform : translate(0, -50%);
     position  : absolute;
-    top       : 50%;
-    left      : var(--gutter);
+    top       : 25%;
+    left      : 0;
 }
 
 .s-header__logo a {
@@ -2871,15 +2879,16 @@ img.u-pull-left {
 
 @media screen and (max-width: 400px) {
     .s-header {
-        --logo-width : 6rem;
+        --logo-width : 25%;
     }
 
     .s-header__logo {
-        left : calc(6vw + .4rem);
+        top: 40px;
+        left : calc(0vh + .4rem);
     }
 
     .s-header__social {
-        right : calc(6vw + .4rem);
+        right : calc(0vw + .4rem);
     }
 
     .s-header__social li {
@@ -3804,3 +3813,125 @@ img.u-pull-left {
         width  : 4.8rem;
     }
 }
+
+
+/* 
+slide text on hover
+ */
+
+ /* @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,800); */
+
+/* *, *:before, *.after{
+   box-sizing: border-box;
+  
+  padding: 0; margin: 0; 
+} */
+
+    /* a:hover{border-bottom: 1px solid #ffffff;} 
+    h1{font-size: 2em; padding: 0px 0;}
+    p{
+      font-size: .75em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 20px 0;
+    }
+
+    .common_slide_buttons:hover{cursor: pointer}
+    .common_slide_buttons {
+      background: transparent; outline: none;
+      
+      position: relative;
+      width: 100%;
+      border: 0px none transparent;
+      padding: 15px 50px;
+      overflow: hidden;
+      left: 3;
+    } */
+
+    /*button:before (attr data-hover)*/
+    /* .common_slide_buttons:hover:before{opacity: 1; transform: translate(0,0);}
+    .common_slide_buttons:before{
+      
+      content: attr(data-hover);
+      position: relative;
+      
+      width: fit-content;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 800;
+      font-size: .8em;
+      opacity: 0;
+      transform: translate(-100%,0);
+      transition: all .3s ease-in-out;
+    } */
+      /*button div (button text before hover)*/
+      /* .common_slide_buttons:hover div{opacity: 0; transform: translate(-100%,0)}
+      .common_slide_buttons div{
+        
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 800;
+        font-size: .8em;
+        transition: all .3s ease-in-out;
+      } */
+
+
+      /* Container for the text that expands on hover */
+
+      /* A quick explaination of how this effect works. A span elemnt won't have a width of it's own. So we convert it to an inline-block using the display property. Then we turn down the max-width of the element to 0. The reason we use max-width is due to a side-effect which is harder to explain in words so just try to replace that with width ;). You'll see that even when we changed the element's width to 0, it's still showing the text. For this we re gonna use overflow property and set it to hidden. To keep the text in one line and aligned properly, we are gonna use the white-space and vertical-align property as set below. The final thing we'll do is to give transition to the max-width property. */
+#hide {
+    display: inline-block;
+    max-width: 0%;
+    vertical-align: bottom;
+    overflow: hidden;
+    
+    white-space: nowrap;
+    transition: max-width 0s 0s, white-space 0s 2s ;
+    font-size: 14px;
+    font-family: var(--font-1);
+    color: white;
+    white-space: nowrap;
+  }
+  
+  .short-name {
+    cursor: pointer;
+    width: 200px;
+    height: fit-content;
+    color: white;
+    font-family: var(--font-1);
+    font-size: 14px;
+    font-weight: bold;
+    
+  }
+  
+  /* On hover of the h1 tag, we are gonna max out the max-width. */
+  .short-name:hover #hide {
+    max-width: fit-content;
+    height: 100%;
+    /* word-wrap: break-word; */
+    white-space: normal;
+  }
+
+  /* .short-name:after #hide {
+    transition : word-wrap 0.4s ease-in-out, white-space 0.4s ease-in-out;
+    word-wrap: none;
+    white-space: nowrap;
+  } */
+
+  .short-name:hover:after #hide {
+    /* word-wrap: break-word; */
+    white-space: normal;
+  }
+  .text{
+    flex:1;
+    width: 100%;
+    height: 50%;
+    display: block;
+
+  }
+
+  #label-privacy{
+    font-family: var(--font-1);
+    color: white;
+    font-size:12px;
+  }
